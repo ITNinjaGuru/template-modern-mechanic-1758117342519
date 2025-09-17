@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Mechanic</title>
+    <style>
+        :root {
+            --primary-color: #1a1a1a;
+            --secondary-color: #333;
+            --accent-color: #ff5722;
+            --background-color: rgba(0, 0, 0, 0.8);
+            --text-color: #ffffff;
+            --heading-font: 'Arial', sans-serif;
+            --body-font: 'Verdana', sans-serif;
+            --button-text: 'Get a Quote';
+            --button-url: '#contact';
+        }
+        body {
+            margin: 0;
+            font-family: var(--body-font);
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: var(--primary-color);
+        }
+        h1 {
+            font-family: var(--heading-font);
+        }
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+        }
+        .features {
+            display: flex;
+            justify-content: space-around;
+            padding: 50px 20px;
+        }
+        .feature {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 20px;
+            width: 30%;
+            text-align: center;
+        }
+        .contact {
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .button {
+            background: var(--accent-color);
+            color: var(--text-color);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: var(--primary-color);
+        }
+        @media (max-width: 768px) {
+            .features {
+                flex-direction: column;
+                align-items: center;
+            }
+            .feature {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Modern Mechanic</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <section class="hero">
+        <h2>Welcome to Modern Mechanic</h2>
+        <p>Your trusted car repair shop.</p>
+        <a href="var(--button-url)" class="button">var(--button-text)</a>
+    </section>
+    <section class="features" id="services">
+        <div class="feature">
+            <h3>Engine Repair</h3>
+            <p>Expert engine diagnostics and repairs.</p>
+        </div>
+        <div class="feature">
+            <h3>Brake Services</h3>
+            <p>Comprehensive brake inspections and replacements.</p>
+        </div>
+        <div class="feature">
+            <h3>Oil Change</h3>
+            <p>Quick and efficient oil change services.</p>
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <p>Get in touch for a quote or to schedule a service.</p>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit" class="button">Send Message</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2023 Modern Mechanic. All rights reserved.</p>
+    </footer>
+</body>
+</html>
